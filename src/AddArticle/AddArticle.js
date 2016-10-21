@@ -74,14 +74,13 @@ class AddArticle extends React.Component {
           <TextField
             hintText="请输入"
             floatingLabelText="标题"
-            rows={2}
             multiLine={true}
             ref="title" style={styles.text}/><br />
           <TextField
             hintText="请输入"
             floatingLabelText="简介"
             multiLine={true}
-            ref="subtitle" rows={2} style={styles.text}/><br />
+            ref="subtitle" style={styles.text}/><br />
           <div style={styles.block}>
             <Checkbox
               label="react"

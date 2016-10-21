@@ -69,7 +69,7 @@ class LeftNav extends React.Component {
           <Link to="/blog">
             <MenuItem onTouchTap={this.handleClose.bind(this)}>后端开发</MenuItem>
           </Link>
-          <Link to="/blog">
+          <Link to="/bloghistory">
             <MenuItem onTouchTap={this.handleClose.bind(this)}>博客更新</MenuItem>
           </Link>
           <Link to="/blog">

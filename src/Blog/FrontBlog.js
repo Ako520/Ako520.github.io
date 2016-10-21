@@ -19,7 +19,6 @@ class Blog extends React.Component {
     //   });
     // } )
     axios.get('http://localhost:3000/posts').then(res => {
-      console.log(res);
       this.setState({
         data:res.data.datas
       });

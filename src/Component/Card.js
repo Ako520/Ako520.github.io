@@ -63,6 +63,10 @@ class OneCard extends React.Component {
 
 
   }
+  handJump(){
+    let id = this.props._id;
+    hashHistory.push(`/view/${id}`)
+  }
   render () {
     let styles={
       all:{
@@ -76,13 +80,13 @@ class OneCard extends React.Component {
     }
     let x=this.props.subtitle;let y="a<br/>b"
     return(
-      <Card style={styles.all}>
+      <Card style={styles.all} onTouchTap={this.handJump.bind(this)}>
         <CardTitle title={this.props.title}  subtitle={this.state.howlong}/>
         <CardText>
           <div dangerouslySetInnerHTML={{__html:this.props.subtitle}}/>
         </CardText>
         <CardActions>
-          <FlatButton label="阅读全文" backgroundColor="#a4c639" hoverColor="#8AA62F" />
+          <FlatButton tton label="阅读全文" backgroundColor="#a4c639" hoverColor="#8AA62F" />
         </CardActions>
       </Card>
     )

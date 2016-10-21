@@ -6,7 +6,7 @@ import About from './About/About.js'
 import Work from './Work/Work.js'
 import AddArticle from './AddArticle/AddArticle.js'
 import FrontBlog from './Blog/FrontBlog.js'
-import Item from './Item/Item.js'
+import Article from './Article/Article.js'
 import React, { PropTypes } from 'react'
 
 
@@ -16,11 +16,11 @@ class Routes extends React.Component {
       <Router history={hashHistory}>
         <Route path="/" component={App}>
           <IndexRoute component={Home} />
-          <Route path="/about" component={About}/>
+          <Route path="/bloghistory" component={About}/>
           <Route path="/frontblog" component={FrontBlog}/>
           <Route path="/work" component={Work}/>
           <Route path="/add" component={AddArticle}/>
-          <Route path="/view/:url" component={Item} />
+          <Route path="/view/:url" component={Article} />
         </Route>
       </Router>
     )
