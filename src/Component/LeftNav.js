@@ -66,7 +66,7 @@ class LeftNav extends React.Component {
           <div style={styles.avatar}></div>
           <Link to="/frontblog"><MenuItem onTouchTap={this.handleClose.bind(this)}>前端开发</MenuItem>
           </Link>
-          <Link to="/blog">
+          <Link to="/backblog">
             <MenuItem onTouchTap={this.handleClose.bind(this)}>后端开发</MenuItem>
           </Link>
           <Link to="/bloghistory">

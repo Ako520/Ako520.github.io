@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react'
-import bg from '../images/383c4a88256bc5e26c8c1ac5750f9dbd.jpg'
 
 class Home extends React.Component {
   render () {
+    console.log(1);
     return (
       <div className="home-container">
         <div className="mengban">

@@ -45,6 +45,7 @@ class App extends React.Component {
     this.setTitle();
   }
   setTitle(){
+    console.log(this.context.router);
     this.setState({
       title:this.context.router.isActive('/', true) ? 'HOME' :
         this.context.router.isActive('/blog')? 'BLOG' :

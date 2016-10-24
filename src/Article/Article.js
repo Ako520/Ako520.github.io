@@ -21,7 +21,7 @@ class Item extends React.Component {
     //   });
     // } )
     console.log(this.props.params.url);
-    axios.get(`http://localhost:3000/posts/${this.props.params.url}`).then(res => {
+    axios.get(`http://localhost:3000/frontArticles/${this.props.params.url}`).then(res => {
       console.log(res);
       this.setState({
         data:marked(res.data.content),

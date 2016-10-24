@@ -18,14 +18,13 @@ class Blog extends React.Component {
     //     wait:false
     //   });
     // } )
-    axios.get('http://localhost:3000/posts').then(res => {
+    axios.get('http://localhost:3000/frontArticles').then(res => {
       this.setState({
         data:res.data.datas
       });
     });
   }
   render () {
-    console.log(this.state.data);
     let cards=this.state.data.map((item,i) => {
       return (
         <OneCard {...item} key={i}/>
@@ -38,5 +37,4 @@ class Blog extends React.Component {
     )
   }
 }
-
 export default Blog;

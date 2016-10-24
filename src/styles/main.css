@@ -68,7 +68,6 @@ a{
   border: none;
 }
 .content-main{
-  overflow-y: scroll;
   flex-grow: 1;
   display: flex;
 }
@@ -95,6 +94,7 @@ a{
 }
 
 .home-container{
+  height: 100vh;
   background-image: url(../images/下载.jpg);
   background-size: cover;
   background-position: 50% 50%;

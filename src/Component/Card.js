@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import {hashHistory} from 'react-router'
+import {browserHistory} from 'react-router'
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 
@@ -9,10 +9,6 @@ class OneCard extends React.Component {
     this.state={
       howlong:""
     }
-  }
-
-  jump(x){
-    hashHistory.push(`/view/${x}`)
   }
   componentDidMount() {
     // getCardData().then( (res) =>{
@@ -64,8 +60,10 @@ class OneCard extends React.Component {
 
   }
   handJump(){
-    let id = this.props._id;
-    hashHistory.push(`/view/${id}`)
+    if (this.context.router.isActive('/frontblog')) {
+      let id = this.props._id;
+      browserHistory.push(`/frontblog/${id}`)
+    }
   }
   render () {
     let styles={
@@ -74,11 +72,10 @@ class OneCard extends React.Component {
         maxWidth:"1200px",
         boxShadow:"0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24)",
         bordrRadius:"20px",
-        margin:"0 auto 30px",
+        margin:"0 2rem 30px",
         paddingBottom:"40PX"
       }
     }
-    let x=this.props.subtitle;let y="a<br/>b"
     return(
       <Card style={styles.all} onTouchTap={this.handJump.bind(this)}>
         <CardTitle title={this.props.title}  subtitle={this.state.howlong}/>
@@ -91,5 +88,8 @@ class OneCard extends React.Component {
       </Card>
     )
   }
+}
+OneCard.contextTypes={
+  router: React.PropTypes.object
 }
 export default OneCard;
